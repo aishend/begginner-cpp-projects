@@ -54,7 +54,13 @@ int main()
     dict[2] = "rock";
      
     int robotPlay = getComputerPlay();
-    cout << "You: " << dict[number - 1] << " vs Robot: " << dict[robotPlay] << endl;   
+
+    cout << endl;
+    cout << "You: " << dict[number - 1] << endl;
+    cout << "vs" << endl;
+    cout << "Robot: " << dict[robotPlay] << endl;
+    cout << endl; 
+    
     if (robotPlay == number) {
         cout << "it was a TIE" << endl;
     } 
