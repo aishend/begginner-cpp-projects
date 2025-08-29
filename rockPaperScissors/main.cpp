@@ -65,7 +65,7 @@ int main()
         cout << "it was a TIE" << endl;
     } 
 
-    if (win(dict[number - 1], dict[robotPlay])) {
+    else if (win(dict[number - 1], dict[robotPlay])) {
         cout << "You won dumbass!!" << endl;
     }
     else {
