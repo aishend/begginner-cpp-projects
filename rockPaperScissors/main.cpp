@@ -5,7 +5,7 @@ using namespace std;
 
 int getComputerPlay() {
     // gera um numero aleatorio semeado!  
-    srand(time(NULL));
+
     return rand() % 3 + 1;
 }
 
@@ -23,8 +23,10 @@ bool win(string player, string secondary)
     return false;   
 } 
 
+
 int main() 
 {
+    srand(time(NULL));
     
     int number; 
     cout << "ROCK! PAPER ORRRR... SCISSORS!!!???" << endl;
