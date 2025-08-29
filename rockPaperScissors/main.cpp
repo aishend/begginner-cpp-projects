@@ -6,7 +6,7 @@ using namespace std;
 int getComputerPlay() {
     // gera um numero aleatorio semeado!  
     srand(time(NULL));
-    return rand() % 3;
+    return rand() % 3 + 1;
 }
 
 bool win(string player, string secondary)
@@ -31,6 +31,7 @@ int main()
     cout << "What is invencible weapon?" << endl; 
     while(1) 
     {
+
         cout << "scissors - 1" << endl;
         cout << "paper - 2" << endl;
         cout << "rock - 3" << endl;
@@ -44,19 +45,22 @@ int main()
         else {
             cout << "Your input is not valid! Please try again!" << endl;
             cout << endl; 
+            cin.clear();
+            cin.ignore(10000, '\n'); 
+
         }
     }
 
 
     map<int, string> dict; 
-    dict[0] = "scissors";
-    dict[1] = "paper";
-    dict[2] = "rock";
+    dict[1] = "scissors";
+    dict[2] = "paper";
+    dict[3] = "rock";
      
     int robotPlay = getComputerPlay();
 
     cout << endl;
-    cout << "You: " << dict[number - 1] << endl;
+    cout << "You: " << dict[number] << endl;
     cout << "vs" << endl;
     cout << "Robot: " << dict[robotPlay] << endl;
     cout << endl; 
@@ -65,7 +69,7 @@ int main()
         cout << "it was a TIE" << endl;
     } 
 
-    else if (win(dict[number - 1], dict[robotPlay])) {
+    else if (win(dict[number], dict[robotPlay])) {
         cout << "You won dumbass!!" << endl;
     }
     else {
