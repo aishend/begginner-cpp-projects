@@ -1,0 +1,2 @@
+
+**cd "/home/leandro/Documents/begginner-cpp-projects/loginSystem/" && g++ main.cpp -o main && "/home/leandro/Documents/begginner-cpp-projects/loginSystem/"main
